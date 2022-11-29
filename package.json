@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Phazerous/JavaScript-Education/issues"
   },
-  "homepage": "https://github.com/Phazerous/JavaScript-Education#readme"
+  "homepage": "https://github.com/Phazerous/JavaScript-Education#readme",
+  "dependencies": {
+    "typescript": "^4.9.3"
+  }
 }
