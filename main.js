@@ -1,6 +1,20 @@
-const name = 'Phazerous';
-const callSign = 'Dangerous';
+const destruct = function ({ results: obj }) {
+  const [userInfo] = obj;
+  const { gender, name, email, location: { city } } = userInfo;
+  const { title, first, last } = name;
 
-const user = { name, callSign }
+  const fullName = `${title} ${first} ${last}`;
 
-console.log(user);
+
+  return {
+    fullName,
+    city,
+    gender,
+    email
+  }
+}
+
+fetch('https://randomuser.me/api/?result=1')
+  .then(res => res.json())
+  .then(destruct)
+  .then(console.log)
