@@ -1,20 +1,8 @@
-const destruct = function ({ results: obj }) {
-  const [userInfo] = obj;
-  const { gender, name, email, location: { city } } = userInfo;
-  const { title, first, last } = name;
-
-  const fullName = `${title} ${first} ${last}`;
-
-
-  return {
-    fullName,
-    city,
-    gender,
-    email
-  }
+const users = {
+  u1: 'Phazerous',
+  u2: 'Phazzy',
+  u3: 'Dangerous'
 }
 
-fetch('https://randomuser.me/api/?result=1')
-  .then(res => res.json())
-  .then(destruct)
-  .then(console.log)
+const updatedUsers = Object.keys(users).map(key => ({ id: key, nickname: users[key] }));
+console.log(updatedUsers);
