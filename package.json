@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/Phazerous/JavaScript-Education#readme",
   "dependencies": {
-    "typescript": "^4.9.3"
+    "sqlite3": "^5.1.4"
   }
 }
