@@ -1,7 +1,11 @@
-function repeatIt(str) {
-  return str.toString().repeat(10);
-}
+// Simple Regex
 
-const magic = repeatIt`custom word `;
+let text = 'testing: 1, 2, 3';
+let regex = /\d+/g;
 
-console.log(magic);
+console.log(regex.test(text));
+console.log(text.search(regex));
+console.log(text.match(regex));
+
+console.log(text.replace(regex, '#'));
+console.log(text.split('D+'));
